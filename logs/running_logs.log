@@ -169,3 +169,259 @@ Traceback (most recent call last):
 TypeError: sparse array length is ambiguous; use getnnz() or shape[0]
 
 
+[2024-07-04 17:53:05,000: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-04 17:53:13,378: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-04 17:53:13,394: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:53:13,394: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:53:13,399: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:53:13,400: INFO: common: created directory at: artifacts]
+[2024-07-04 17:53:13,401: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-04 17:53:14,363: INFO: Data_Ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 209970
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "2dbb2f254cacad0ea3ed18728488db40bdf60da4b5301afb828d480daac213c5"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 14E1:7354:9FC08:C9C37:66869431
+Accept-Ranges: bytes
+Date: Thu, 04 Jul 2024 12:23:14 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10226-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1720095794.049460,VS0,VE342
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: be41468bea3601298064f1d0742e50cb301c04d5
+Expires: Thu, 04 Jul 2024 12:28:14 GMT
+Source-Age: 0
+
+]
+[2024-07-04 17:53:14,387: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:53:14,387: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-07-04 17:53:14,387: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:53:14,387: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:53:14,387: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:53:14,396: INFO: common: created directory at: artifacts]
+[2024-07-04 17:53:14,397: INFO: common: created directory at: artifacts/data_validation]
+[2024-07-04 17:53:14,431: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:53:14,431: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-07-04 17:53:14,448: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:53:14,448: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:53:14,457: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:53:14,457: INFO: common: created directory at: artifacts]
+[2024-07-04 17:53:14,459: INFO: common: created directory at: artifacts/data_transformation]
+[2024-07-04 17:53:14,472: INFO: Data_Transformation: Reading Data...]
+[2024-07-04 17:53:14,473: INFO: Data_Transformation: Vectorization initiated]
+[2024-07-04 17:53:14,663: INFO: Data_Transformation: Vectorization Completed]
+[2024-07-04 17:53:14,730: INFO: Data_Transformation: Oversampling Completed]
+[2024-07-04 17:53:14,747: INFO: Data_Transformation: Data Splitting is Completed]
+[2024-07-04 17:53:14,747: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:53:37,194: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-04 17:53:42,473: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-04 17:53:42,490: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:53:42,490: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:53:42,496: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:53:42,496: INFO: common: created directory at: artifacts]
+[2024-07-04 17:53:42,497: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-04 17:53:42,824: INFO: Data_Ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 209970
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "2dbb2f254cacad0ea3ed18728488db40bdf60da4b5301afb828d480daac213c5"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 14E1:7354:9FC08:C9C37:66869431
+Accept-Ranges: bytes
+Date: Thu, 04 Jul 2024 12:23:42 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10228-MAA
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1720095823.861108,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b498c8fa7e551e2b265f696ec738b9b921501a02
+Expires: Thu, 04 Jul 2024 12:28:42 GMT
+Source-Age: 28
+
+]
+[2024-07-04 17:53:42,855: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:53:42,855: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-07-04 17:53:42,855: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:53:42,870: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:53:42,870: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:53:42,874: INFO: common: created directory at: artifacts]
+[2024-07-04 17:53:42,874: INFO: common: created directory at: artifacts/data_validation]
+[2024-07-04 17:53:42,902: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:53:42,902: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-07-04 17:53:42,911: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:53:42,922: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:53:42,922: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:53:42,922: INFO: common: created directory at: artifacts]
+[2024-07-04 17:53:42,922: INFO: common: created directory at: artifacts/data_transformation]
+[2024-07-04 17:53:42,956: INFO: Data_Transformation: Reading Data...]
+[2024-07-04 17:53:42,956: INFO: Data_Transformation: Vectorization initiated]
+[2024-07-04 17:53:43,158: INFO: Data_Transformation: Vectorization Completed]
+[2024-07-04 17:53:43,209: INFO: Data_Transformation: Oversampling Completed]
+[2024-07-04 17:53:43,222: INFO: Data_Transformation: Data Splitting is Completed]
+[2024-07-04 17:53:43,222: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:53:43,228: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-07-04 17:53:43,231: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:53:43,232: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:53:43,233: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:53:43,234: INFO: common: created directory at: artifacts]
+[2024-07-04 17:53:43,234: INFO: common: created directory at: artifacts/model_trainer]
+[2024-07-04 17:53:43,234: INFO: Model_trainer: Building Model]
+[2024-07-04 17:53:43,356: INFO: Model_trainer: Model Built]
+[2024-07-04 17:53:51,872: INFO: Model_trainer: Model Trained]
+[2024-07-04 17:53:51,873: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-04 17:53:51,919: INFO: Model_trainer:  Model Saved]
+[2024-07-04 17:53:58,727: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:57:07,728: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-04 17:57:12,937: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-04 17:57:12,937: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:57:12,937: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:57:12,954: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:57:12,956: INFO: common: created directory at: artifacts]
+[2024-07-04 17:57:12,956: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-04 17:57:13,571: INFO: Data_Ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 209970
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "2dbb2f254cacad0ea3ed18728488db40bdf60da4b5301afb828d480daac213c5"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 14E1:7354:9FC08:C9C37:66869431
+Accept-Ranges: bytes
+Date: Thu, 04 Jul 2024 12:27:13 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10239-MAA
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1720096034.604457,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 7f558a1d9daed6f0371d3f77e6724ba471c528bc
+Expires: Thu, 04 Jul 2024 12:32:13 GMT
+Source-Age: 239
+
+]
+[2024-07-04 17:57:13,597: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:57:13,598: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-07-04 17:57:13,600: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:57:13,601: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:57:13,602: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:57:13,603: INFO: common: created directory at: artifacts]
+[2024-07-04 17:57:13,604: INFO: common: created directory at: artifacts/data_validation]
+[2024-07-04 17:57:13,633: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:57:13,633: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-07-04 17:57:13,643: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:57:13,643: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:57:13,650: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:57:13,651: INFO: common: created directory at: artifacts]
+[2024-07-04 17:57:13,652: INFO: common: created directory at: artifacts/data_transformation]
+[2024-07-04 17:57:13,664: INFO: Data_Transformation: Reading Data...]
+[2024-07-04 17:57:13,665: INFO: Data_Transformation: Vectorization initiated]
+[2024-07-04 17:57:13,821: INFO: Data_Transformation: Vectorization Completed]
+[2024-07-04 17:57:13,890: INFO: Data_Transformation: Oversampling Completed]
+[2024-07-04 17:57:13,893: INFO: Data_Transformation: Data Splitting is Completed]
+[2024-07-04 17:57:13,893: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 17:57:13,898: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-07-04 17:57:13,900: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 17:57:13,900: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 17:57:13,902: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 17:57:13,904: INFO: common: created directory at: artifacts]
+[2024-07-04 17:57:13,905: INFO: common: created directory at: artifacts/model_trainer]
+[2024-07-04 17:57:13,906: INFO: Model_trainer: Building Model]
+[2024-07-04 17:57:14,047: INFO: Model_trainer: Model Built]
+[2024-07-04 17:57:23,316: INFO: Model_trainer: Model Trained]
+[2024-07-04 17:57:23,316: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-04 17:57:23,353: INFO: Model_trainer:  Model Saved]
+[2024-07-04 17:57:26,629: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2024-07-04 18:02:20,693: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-04 18:02:25,421: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-04 18:02:25,421: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 18:02:25,421: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 18:02:25,421: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 18:02:25,421: INFO: common: created directory at: artifacts]
+[2024-07-04 18:02:25,421: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-04 18:02:25,421: INFO: Data_Ingestion: File already exists of size: ~ 205 KB]
+[2024-07-04 18:02:25,440: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-04 18:02:25,440: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-07-04 18:02:25,447: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 18:02:25,448: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 18:02:25,448: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 18:02:25,448: INFO: common: created directory at: artifacts]
+[2024-07-04 18:02:25,448: INFO: common: created directory at: artifacts/data_validation]
+[2024-07-04 18:02:25,481: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 18:02:25,481: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-07-04 18:02:25,484: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 18:02:25,484: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 18:02:25,484: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 18:02:25,488: INFO: common: created directory at: artifacts]
+[2024-07-04 18:02:25,488: INFO: common: created directory at: artifacts/data_transformation]
+[2024-07-04 18:02:25,488: INFO: Data_Transformation: Reading Data...]
+[2024-07-04 18:02:25,488: INFO: Data_Transformation: Vectorization initiated]
+[2024-07-04 18:02:25,672: INFO: Data_Transformation: Vectorization Completed]
+[2024-07-04 18:02:25,741: INFO: Data_Transformation: Oversampling Completed]
+[2024-07-04 18:02:25,741: INFO: Data_Transformation: Data Splitting is Completed]
+[2024-07-04 18:02:25,756: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 18:02:25,757: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-07-04 18:02:25,760: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 18:02:25,762: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 18:02:25,763: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 18:02:25,763: INFO: common: created directory at: artifacts]
+[2024-07-04 18:02:25,763: INFO: common: created directory at: artifacts/model_trainer]
+[2024-07-04 18:02:25,763: INFO: Model_trainer: Building Model]
+[2024-07-04 18:02:25,893: INFO: Model_trainer: Model Built]
+[2024-07-04 18:02:34,852: INFO: Model_trainer: Model Trained]
+[2024-07-04 18:02:34,854: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-04 18:02:34,877: INFO: Model_trainer:  Model Saved]
+[2024-07-04 18:02:38,752: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
