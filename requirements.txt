@@ -7,12 +7,8 @@ seaborn
 tensorflow
 wordcloud
 types-PyYAML
-Flask
-Flask-Cors
-dagshub
 tqdm
 python-box==6.0.2
-mlflow==2.2.2
 pyYAML
 ensure==1.0.2
 notebook
