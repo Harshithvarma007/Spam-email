@@ -1,0 +1,171 @@
+[2024-07-04 12:08:32,121: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-04 12:08:40,472: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-04 12:08:40,488: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:08:40,488: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:08:40,488: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:08:40,488: INFO: common: created directory at: artifacts]
+[2024-07-04 12:08:40,493: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-04 12:08:40,493: INFO: Data_Ingestion: File already exists of size: ~ 205 KB]
+[2024-07-04 12:08:40,500: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-04 12:08:40,506: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-07-04 12:08:40,508: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:08:40,509: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:08:40,511: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:08:40,511: INFO: common: created directory at: artifacts]
+[2024-07-04 12:08:40,515: INFO: common: created directory at: artifacts/data_validation]
+[2024-07-04 12:08:40,561: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 12:08:40,561: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-07-04 12:08:40,561: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:08:40,578: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:08:40,581: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:08:40,582: INFO: common: created directory at: artifacts]
+[2024-07-04 12:08:40,583: INFO: common: created directory at: artifacts/data_transformation]
+[2024-07-04 12:08:40,586: INFO: Data_Transformation: Reading Data...]
+[2024-07-04 12:08:40,595: INFO: Data_Transformation: Vectorization initiated]
+[2024-07-04 12:08:40,855: INFO: Data_Transformation: Vectorization Completed]
+[2024-07-04 12:08:40,928: INFO: Data_Transformation: Oversampling Completed]
+[2024-07-04 12:08:40,944: INFO: Data_Transformation: Data Splitting is Completed]
+[2024-07-04 12:08:40,946: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 12:08:40,947: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-07-04 12:08:40,948: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:08:40,950: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:08:40,950: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:08:40,951: INFO: common: created directory at: artifacts]
+[2024-07-04 12:08:40,952: INFO: common: created directory at: artifacts/model_trainer]
+[2024-07-04 12:08:40,953: INFO: Model_trainer: Building Model]
+[2024-07-04 12:08:41,161: INFO: Model_trainer: Model Built]
+[2024-07-04 12:08:50,191: INFO: Model_trainer: Model Trained]
+[2024-07-04 12:08:50,192: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-04 12:08:50,241: INFO: Model_trainer:  Model Saved]
+[2024-07-04 12:08:53,809: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2024-07-04 12:08:53,811: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-07-04 12:08:53,822: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:08:53,835: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:08:53,835: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:08:53,845: INFO: common: created directory at: artifacts]
+[2024-07-04 12:08:53,848: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-07-04 12:08:53,852: INFO: Model_Evaluation: Model Loading]
+[2024-07-04 12:08:53,943: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-07-04 12:08:53,951: INFO: Model_Evaluation: Model Loaded]
+[2024-07-04 12:08:53,952: ERROR: main: Input must be a SparseTensor.]
+Traceback (most recent call last):
+  File "C:\Users\N Ramaraju\Desktop\Projects\Spam-email\main.py", line 55, in <module>
+    data_ingestion.main(res)
+  File "c:\users\n ramaraju\desktop\projects\spam-email\src\Spam_mail\pipeline\stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.eval(res[1],res[3])
+  File "c:\users\n ramaraju\desktop\projects\spam-email\src\Spam_mail\components\Model_Evaluation.py", line 19, in eval
+    sorted_x_test = tf.sparse.reorder(x_test)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\ops\sparse_ops.py", line 858, in sparse_reorder
+    sp_input = _convert_to_sparse_tensor(sp_input)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\ops\sparse_ops.py", line 76, in _convert_to_sparse_tensor
+    raise TypeError("Input must be a SparseTensor.")
+TypeError: Input must be a SparseTensor.
+[2024-07-04 12:10:27,497: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-04 12:10:32,080: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-04 12:10:32,080: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:10:32,080: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:10:32,080: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:10:32,080: INFO: common: created directory at: artifacts]
+[2024-07-04 12:10:32,080: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-04 12:10:32,080: INFO: Data_Ingestion: File already exists of size: ~ 205 KB]
+[2024-07-04 12:10:32,101: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-04 12:10:32,101: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-07-04 12:10:32,104: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:10:32,106: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:10:32,107: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:10:32,108: INFO: common: created directory at: artifacts]
+[2024-07-04 12:10:32,108: INFO: common: created directory at: artifacts/data_validation]
+[2024-07-04 12:10:32,130: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 12:10:32,131: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-07-04 12:10:32,137: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:10:32,139: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:10:32,139: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:10:32,140: INFO: common: created directory at: artifacts]
+[2024-07-04 12:10:32,141: INFO: common: created directory at: artifacts/data_transformation]
+[2024-07-04 12:10:32,144: INFO: Data_Transformation: Reading Data...]
+[2024-07-04 12:10:32,144: INFO: Data_Transformation: Vectorization initiated]
+[2024-07-04 12:10:32,303: INFO: Data_Transformation: Vectorization Completed]
+[2024-07-04 12:10:32,358: INFO: Data_Transformation: Oversampling Completed]
+[2024-07-04 12:10:32,358: INFO: Data_Transformation: Data Splitting is Completed]
+[2024-07-04 12:10:32,358: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-07-04 12:10:32,358: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-07-04 12:10:32,358: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-04 12:10:32,358: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-04 12:10:32,370: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-07-04 12:10:32,371: INFO: common: created directory at: artifacts]
+[2024-07-04 12:10:32,372: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-07-04 12:10:32,372: INFO: Model_Evaluation: Model Loading]
+[2024-07-04 12:10:32,469: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-07-04 12:10:32,475: INFO: Model_Evaluation: Model Loaded]
+[2024-07-04 12:10:32,478: ERROR: main: TypeError: sparse array length is ambiguous; use getnnz() or shape[0]
+Traceback (most recent call last):
+
+  File "C:\Users\N Ramaraju\AppData\Roaming\Python\Python311\site-packages\scipy\sparse\_base.py", line 404, in __len__
+    raise TypeError("sparse array length is ambiguous; use getnnz()"
+
+TypeError: sparse array length is ambiguous; use getnnz() or shape[0]
+
+]
+Traceback (most recent call last):
+  File "C:\Users\N Ramaraju\Desktop\Projects\Spam-email\main.py", line 55, in <module>
+    data_ingestion.main(res)
+  File "c:\users\n ramaraju\desktop\projects\spam-email\src\Spam_mail\pipeline\stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.eval(res[1],res[3])
+  File "c:\users\n ramaraju\desktop\projects\spam-email\src\Spam_mail\components\Model_Evaluation.py", line 18, in eval
+    x_test_sparse = tf.sparse.from_dense(x_test)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\ops\sparse_ops.py", line 135, in from_dense
+    tensor = ops.convert_to_tensor(tensor)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\profiler\trace.py", line 183, in wrapped
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\framework\ops.py", line 713, in convert_to_tensor
+    return tensor_conversion_registry.convert(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\framework\tensor_conversion_registry.py", line 234, in convert
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\framework\constant_tensor_conversion.py", line 29, in _constant_tensor_conversion_function
+    return constant_op.constant(v, dtype=dtype, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\ops\weak_tensor_ops.py", line 142, in wrapper
+    return op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 276, in constant
+    return _constant_impl(value, dtype, shape, name, verify_shape=False,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 289, in _constant_impl
+    return _constant_eager_impl(ctx, value, dtype, shape, verify_shape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 301, in _constant_eager_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\N Ramaraju\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 108, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: TypeError: sparse array length is ambiguous; use getnnz() or shape[0]
+Traceback (most recent call last):
+
+  File "C:\Users\N Ramaraju\AppData\Roaming\Python\Python311\site-packages\scipy\sparse\_base.py", line 404, in __len__
+    raise TypeError("sparse array length is ambiguous; use getnnz()"
+
+TypeError: sparse array length is ambiguous; use getnnz() or shape[0]
+
+
