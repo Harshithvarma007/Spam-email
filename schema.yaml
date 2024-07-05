@@ -1,8 +1,0 @@
-COLUMNS:
-  Message: string
-
-
-
-TARGET_COLUMN:
-  Category: string
-  

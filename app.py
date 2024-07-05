@@ -5,8 +5,8 @@ import os
 from PIL import Image
 
 # File paths
-vectorizer_filename = 'artifacts/data_transformation/count_vectorizer.pkl'
-model_filename = 'artifacts/model_trainer/model.h5'
+vectorizer_filename = 'harshithvarma007/spam-email/main/artifacts/data_transformation/count_vectorizer.pkl'
+model_filename = 'harshithvarma007/spam-email/main/artifacts/model_trainer/model.h5'
 
 # Function to load vectorizer and model
 def load_model_and_vectorizer():
