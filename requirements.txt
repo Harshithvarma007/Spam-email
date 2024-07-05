@@ -1,16 +1,5 @@
-
-matplotlib
-scikit-learn
-imblearn
-seaborn
-tensorflow
-wordcloud
-types-PyYAML
-tqdm
-python-box==6.0.2
-pyYAML
-notebook
-joblib
-streamlit
--e .
-
+streamlit==1.36.0
+joblib==1.4.2
+tensorflow>=2.0
+Pillow
+scikit-learn  # This is often required for CountVectorizer
