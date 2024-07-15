@@ -5,9 +5,9 @@ import os
 from PIL import Image
 
 # File paths
-vectorizer_filename = 'assets\count_vectorizer.pkl'
-model_filename = 'assets\model.h5'
-confusion_matrix_image = 'assests\confusion_matrix.png'
+vectorizer_filename = 'count_vectorizer.pkl'
+model_filename = 'model.h5'
+confusion_matrix_image = 'confusion_matrix.png'
 
 # Sample email contents for dropdown
 sample_emails = {
@@ -131,16 +131,16 @@ elif choice == "🔗 Resources":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        github_icon = Image.open('assets\github-mark.png')
+        github_icon = Image.open('github-mark.png')
         st.image(github_icon, width=50)
         st.markdown("[GitHub](https://github.com/Harshithvarma007/Spam-email)", unsafe_allow_html=True)
 
     with col2:
-        kaggle_icon = Image.open('assets/4373210_kaggle_logo_logos_icon.png')
+        kaggle_icon = Image.open('kaggle_logo.png')
         st.image(kaggle_icon, width=50)
         st.markdown("[Kaggle](https://www.kaggle.com/code/harshithvarma007/spam-email-classification-98-accuracy)", unsafe_allow_html=True)
 
     with col3:
-        medium_icon = Image.open('assets\medium.png')
+        medium_icon = Image.open('medium.png')
         st.image(medium_icon, width=50)
         st.markdown("[Medium](https://medium.com/@harshith007varma007/end-to-end-ml-project-spam-classification-761cccfb257b)", unsafe_allow_html=True)
