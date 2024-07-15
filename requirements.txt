@@ -2,4 +2,4 @@ streamlit
 joblib
 tensorflow
 Pillow
-
+sklearn
